@@ -1655,7 +1655,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).SkipWhile("$<=5")</code></pre> 
+                <pre><code>Enumerable.Range(1,10).SkipWhile("$<=5")</code></pre>
             </td> 
         </tr> 
         <tr> 
