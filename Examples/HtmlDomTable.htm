@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JSLINQ Example: Search HTML DOM Table</title>
+    <script type="text/javascript" src="../scripts/JSLINQ.js"></script>
+    <script type="text/javascript">
+        function GetResults() {
+            // Get the rows of data in the "Source Data" table.
+            var data = document.getElementById("sourceData").getElementsByTagName("tr");
+
+            var strFirstName = document.getElementById("txtFirstName").value;
+
+            // Do the JSLINQ Query
+            var results = JSLINQ(data)
+                        .Where(function(item) { return item.childNodes[1].innerHTML == strFirstName/*'Chris'*/; })
+                        .Select(function(item) {
+                            // This select copies the actual TR elements that are in the query
+                            // This is required so we don't end up moving the TR elements
+                            // from one table to the other. We only want to place a copy
+                            // in the results table; not move the row to that table.
+                            var row = document.createElement(item.tagName);
+                            for (var i = 0; i < item.childNodes.length; i++) {
+                                var col = document.createElement(item.childNodes[i].tagName);
+                                col.innerHTML = item.childNodes[i].innerHTML;
+                                row.appendChild(col);
+                            }
+                            return row;
+                        });
+
+
+            // Get the Results Table Body
+            var tableResultsBody = document.getElementById("dataResults");
+
+            // Clear Results table
+            for (var i = (tableResultsBody.childNodes.length - 1); i > -1; i--) {
+                tableResultsBody.removeChild(tableResultsBody.childNodes[i]);
+            }
+
+            // Display Query Results in the Results Table Body
+            var resultArray = results.ToArray();
+            for (var i in resultArray) {
+                tableResultsBody.appendChild(resultArray[i]);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>JSLINQ Example: Search HTML DOM Table</h1>
+    <p>This example demonstrates using an HTML Table as the data source for the JSLINQ query, and then displaying the search results within another Table on the page.</p>
+    
+    <h2>Query Results</h2>
+    First Name:&nbsp;<input type="text" id="txtFirstName" value="Chris" />&nbsp;&nbsp;<input type="button" value="Search" onclick="GetResults();" />
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+            </tr>
+        </thead>
+        <tbody id="dataResults">
+        </tbody>
+    </table>
+
+    <h2>Source Data</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+            </tr>
+        </thead>
+        <tbody id="sourceData">
+            <tr>
+                <td>1</td>
+                <td>Chris</td>
+                <td>Pearson</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Kate</td>
+                <td>Johnson</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Josh</td>
+                <td>Sutherland</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>John</td>
+                <td>Ronald</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Steve</td>
+                <td>Pinkerton</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Katie</td>
+                <td>Zimmerman</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Dirk</td>
+                <td>Anderson</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Chris</td>
+                <td>Stevenson</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Bernard</td>
+                <td>Sutherland</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Kate</td>
+                <td>Pinkerton</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <hr/>
+	<a href="../default.htm">Back...</a>
+</body>
+</html>

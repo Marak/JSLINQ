@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LINQ to JavaScript SDK - Samples</title>
+    
+    <style type="text/css">
+        ul {margin-left: 2px;}
+        ul li {font-weight: bold; font-size: smaller;}
+        ul ul { margin-left: 5px; list-style-type: none;}
+        ul ul li {font-weight: normal; font-size: smaller;}
+        h4 { width: 100%; background-color: #ccc; padding: 3px; margin-bottom: -10px;}
+        table.noborder{border: none;}
+        table {border: 1px #ccc solid;}
+        table tr th {background-color: #efefef; padding: 3px;}
+        table tr td {vertical-align: top;}
+    </style>
+    
+    <script type="text/javascript" src="scripts/JSLINQ.js"></script>
+    <script type="text/javascript" src="scripts/Samples.js"></script>
+    
+    <script type="text/javascript">
+        function Page_Load(){
+            Samples.ShowSampleList();
+            // Show the First From Operator Sample by Default
+            Samples.Show(Samples.SampleList[0].Samples[0]);
+            Samples.ShowSourceData();
+        }
+    </script>
+</head>
+<body onload="Page_Load();">
+
+    <h1>LINQ to JavaScript - Samples</h1>
+    <p>These are some basic samples of using JSLINQ to select/manipulate your JavaScript Arrays.</p>
+    <table class="noborder">
+        <tr>
+            <td valign="top" style="margin-right: 10px; width: 250px; border: solid 1px black; background-color: #efefef;padding-left:3px">
+                JSLINQ v<script type="text/javascript">document.write(JSLINQ().jslinq);</script>
+                <ul id="SampleList"></ul>
+		<br/>
+		<hr/>
+		<a href="default.htm">Back...</a>
+		<br />
+		<br />
+		<a href="http://codeplex.com/jslinq">JSLINQ Project Homepage</a>
+            </td>
+            <td valign="top">
+                <h2 id="lblSampleTitle"></h2>
+                <span id="lblSampleDescription"></span><br />
+                <br />
+                <h4>Code:</h4><br />
+                <textarea cols="75" rows="8" id="txtSampleCode"></textarea><br />
+                <br />
+                <table class="noborder" width="100%">
+                    <tr>
+                        <td width="50%" style="padding-right: 5px;">
+                            <h4>Samples.People Source Array:</h4><br />
+                            <div id="SourceData"></div>
+                        </td>
+                        <td width="50%" style="padding-left: 5px;">
+                            <h4>Results of JSLINQ Operation:</h4><br />
+                            <div id="ResultData"></div>        
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

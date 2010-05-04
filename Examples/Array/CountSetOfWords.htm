@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JSLINQ Example: Count Occurrences of a Set of Words within a String</title>
+    <script type="text/javascript" src="../../scripts/JSLINQ.js"></script>
+    <script type="text/javascript">
+        function Count()
+        {
+            var wordsToFind = document.getElementById("txtWord").value.split(" ");
+            var str = document.getElementById("txtString").value;
+            var words = str.split(" ");
+            
+            var count = JSLINQ(words).
+                    Intersect(wordsToFind, function(item, index, item2, index2){return item.toLowerCase() == item2.toLowerCase();}).
+                    Count();
+            
+            document.getElementById("lblWordCount").innerHTML = count + " word matches were found.";
+        }
+    </script>
+</head>
+<body>
+    <h1>JSLINQ Example: Count Occurrences of a Set of Words within a String</h1>
+    <p>This examples shows how to count the number of times each word within a set of words occurs within a string.</p>
+    <p>
+        Words to find:&nbsp;<input type="text" id="txtWord" value="The word" /><i>(seperate by a space)</i><br />
+        String to check:<br />
+        <textarea id="txtString" cols="25" rows="5">This sentance contains the word THE two times.</textarea><br />
+        <input type="button" id="btnCount" value="Count" onclick="Count();" /><br />
+        <span id="lblWordCount"></span>
+    </p>
+    <hr/>
+	<a href="../../default.htm">Back...</a>
+</body>
+</html>

@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JSLINQ Extensibility Example: "get" method</title>
+    
+    <style type="text/css">
+        h2 { margin-bottom: 2px; margin-top: 5px;}
+        
+        
+        ul {margin-left: 2px;}
+        ul li {font-weight: bold; font-size: smaller;}
+        ul ul { margin-left: 5px; list-style-type: none;}
+        ul ul li {font-weight: normal; font-size: smaller;}
+        h4 { width: 100%; background-color: #ccc; padding: 3px; margin-bottom: -10px;}
+        table.noborder{border: none;}
+        table {border: 1px #ccc solid;}
+        table tr th {background-color: #efefef; padding: 3px;}
+        table tr td {vertical-align: top;}
+    </style>
+    
+    <script type="text/javascript" src="../../scripts/JSLINQ.js"></script>
+    <script type="text/javascript" src="../../scripts/Samples.js"></script>
+    <script type="text/javascript" id="getplugin">// The following is the entire plugin for the
+// "get" method extension to JSLINQ
+JSLINQ.fn.get = function(index, defaultValue) {
+    if (arguments.length == 0) {
+        return this.ElementAt(0);
+    }
+    else if (arguments.length == 1) {
+        if (isNaN(index)) {
+            return this.ElementAtOrDefault(0, index);
+        } else {
+            return this.ElementAtOrDefault(index);
+        }
+    }
+    else if (arguments.length > 1) {
+        return this.ElementAtOrDefault(index, defaultValue);
+    }
+};
+    </script>
+    <script type="text/javascript">
+        function LoadUI() {
+            Samples.ShowSourceData();
+        }
+
+        function showValue(val) {
+            html = "null";
+            if (val) {
+                html = "ID: " + val.ID + "\n" +
+                "FirstName: " + val.FirstName + "\n" +
+                "LastName: " + val.LastName;
+            }
+            alert(html);
+        }
+    </script>
+</head>
+<body onload="LoadUI();">
+    <h1>JSLINQ Extensibility Example: "get" method</h1>
+    <p>This is an example of adding a "get" method to the JSLINQ object that works similarly to the "ElementAtOrDefault" method.</p>
+    <p>To use this sample "get" plugin, just pass in the "index" and "defaultValue" parameters the same as you would with the "ElementAtOrDefault" method. You can get the First element by omitting the "index" parameter.</p>
+    
+    <h2>Plugin Source Code:</h2>
+    <textarea id="txtPluginCode" rows="12" cols="75"></textarea>
+    <script type="text/javascript">
+        document.getElementById("txtPluginCode").value = document.getElementById('getplugin').innerHTML;
+    </script>
+    <hr/>
+    
+    <h2>Example Usage:</h2>
+    
+    <table cellpadding='0' cellspacing='0' style="border: none">
+        <tr>
+            <td style='padding: 2px'>
+                <p>The full list of data that is being selected by the below example usages are located to the right.</p>
+                
+                <br />
+                
+                <table>
+                    <tr>
+                        <th>Usage / Operation</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Select First:</strong><br />
+                            <div id="example01">
+                            JSLINQ(Samples.People).get();
+                            </div>
+                        </td>
+                        <td>
+                            <input type="button" value="Execute" onclick="example01();"/>
+                            <script type="text/javascript">
+                                function example01() {
+                                    showValue(
+                                        JSLINQ(Samples.People).get()
+                                    );
+                                }
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Select First or Default:</strong><br />
+                            <div id="example02">
+                            JSLINQ(Samples.People).get({ID: 0, FirstName: "John", LastName: "Doe", Books: []});
+                            </div>
+                        </td>
+                        <td>
+                            <input type="button" value="Execute" onclick="example02();"/>
+                            <script type="text/javascript">
+                                function example02() {
+                                    showValue(
+                                        JSLINQ(Samples.People).get({ ID: 0, FirstName: "John", LastName: "Doe", Books: [] })
+                                    );
+                                }
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Select Third:</strong><br />
+                            <div id="Div1">
+                            JSLINQ(Samples.People).get(2);
+                            </div>
+                        </td>
+                        <td>
+                            <input type="button" value="Execute" onclick="example03();"/>
+                            <script type="text/javascript">
+                                function example03() {
+                                    showValue(
+                                        JSLINQ(Samples.People).get(2)
+                                    );
+                                }
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Select Fifteenth or Default:</strong><br />
+                            <div id="Div2">
+                            JSLINQ(Samples.People).get(15,
+                                {ID: 0, FirstName: "John", LastName: "Doe", Books: []}
+                            );
+                            </div>
+                        </td>
+                        <td>
+                            <input type="button" value="Execute" onclick="example04();"/>
+                            <script type="text/javascript">
+                                function example04() {
+                                    showValue(
+                                        JSLINQ(Samples.People).get(15,
+                                            { ID: 0, FirstName: "John", LastName: "Doe", Books: [] }
+                                        )
+                                    );
+                                }
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+            <td>
+                <ul id="SourceData"></ul>        
+            </td>
+        </tr>
+    </table>
+    
+    <hr />
+    
+	<a href="../../default.htm">Back...</a>
+</body>
+</html>

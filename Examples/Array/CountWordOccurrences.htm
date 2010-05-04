@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JSLINQ Example: Count Occurrences of a Word in a String</title>
+    <script type="text/javascript" src="../../scripts/JSLINQ.js"></script>
+    <script type="text/javascript">
+        function Count()
+        {
+            var wordToFind = document.getElementById("txtWord").value;
+            var str = document.getElementById("txtString").value;
+            var words = str.split(" ");
+            
+            var count = JSLINQ(words).
+                    Where(function(item){
+                            return item.toLowerCase() == wordToFind.toLowerCase()
+                        }
+                    ).
+                    Count();
+            
+            document.getElementById("lblWordCount").innerHTML = count + " occurrence(s) of the search term \"" + wordToFind + "\" were found.";
+        }
+    </script>
+</head>
+<body>
+    <h1>JSLINQ Example: Count Occurrences of a Word in a String</h1>
+    <p>This examples shows how to count the number of time a specific words occurs within a string.</p>
+    <p>
+        Word to find:&nbsp;<input type="text" id="txtWord" value="The" /><br />
+        String to check:<br />
+        <textarea id="txtString" cols="25" rows="5">This sentance contains the word THE two times.</textarea><br />
+        <input type="button" id="btnCount" value="Count" onclick="Count();" /><br />
+        <span id="lblWordCount"></span>
+    </p>
+    <hr/>
+	<a href="../../default.htm">Back...</a>
+</body>
+</html>
