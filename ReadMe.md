@@ -116,13 +116,16 @@ assume the following JSON data:
 
 ###simple Select statement
 
-    var sample = JSLINQ(data).Select(function (item) {return item.FirstName;});
+    var sample = JSLINQ(data).
+      Select(function (item) {return item.FirstName;});
 
     output : {"items":["Chris","Kate","Josh","John","Steve","Katie","Dirk","Chris","Bernard","Kate"]}
 
 ###simple Select statement with OrderBY
 
-     var sample = JSLINQ(Samples.People).OrderBy(function (item) {return item.FirstName;}).Select(function (item) {return item.FirstName;});
+     var sample = JSLINQ(Samples.People).
+       OrderBy(function (item) {return item.FirstName;}).
+       Select(function (item) {return item.FirstName;});
 
      output : {"items":["Bernard","Chris","Chris","Dirk","John","Josh","Kate","Kate","Katie","Steve"]}
 
