@@ -55,8 +55,8 @@ Select, Join, Where, GroupBy
                 params T obj
             </td> 
             <td> 
-                <pre><code>Enumerable.Choice("a","b","c","d").Take(10)</pre></code> 
-                <pre><code>Enumerable.Choice(["a","b","c","d"]).Take(10)</pre></code> 
+                <pre><code>Enumerable.Choice("a","b","c","d").Take(10)</code></pre>
+                <pre><code>Enumerable.Choice(["a","b","c","d"]).Take(10)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -70,8 +70,8 @@ Select, Join, Where, GroupBy
                 params T obj
             </td> 
             <td> 
-                <pre><code>Enumerable.Cycle(1,"foo",true).Take(10)</pre></code> 
-                <pre><code>Enumerable.Cycle([1,"foo",true]).Take(10)</pre></code> 
+                <pre><code>Enumerable.Cycle(1,"foo",true).Take(10)</code></pre>
+                <pre><code>Enumerable.Cycle([1,"foo",true]).Take(10)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -85,7 +85,7 @@ Select, Join, Where, GroupBy
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Empty()</pre></code> 
+                <pre><code>Enumerable.Empty()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -100,7 +100,7 @@ Select, Join, Where, GroupBy
             </td> 
             <td> 
                 <pre><code>var arr = [1,124,"aaa",function(){},false];
-Enumerable.From(arr)</pre></code> 
+Enumerable.From(arr)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -109,7 +109,7 @@ Enumerable.From(arr)</pre></code>
             </td> 
             <td> 
                 <pre><code>var obj = {a:3,b:"3",z:function(){},d:true};
-Enumerable.From(obj).Select("$.Key + ':' + $.Value")</pre></code> 
+Enumerable.From(obj).Select("$.Key + ':' + $.Value")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -118,7 +118,7 @@ Enumerable.From(obj).Select("$.Key + ':' + $.Value")</pre></code>
             </td> 
             <td> 
                 <pre><code>var node = document.getElementsByTagName("h2");
-Enumerable.From(node).Select("$.innerHTML")</pre></code> 
+Enumerable.From(node).Select("$.innerHTML")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -126,7 +126,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 Number obj
             </td> 
             <td> 
-                <pre><code>Enumerable.From(5)</pre></code> 
+                <pre><code>Enumerable.From(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -134,7 +134,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 String obj
             </td> 
             <td> 
-                <pre><code>Enumerable.From("foobar")</pre></code> 
+                <pre><code>Enumerable.From("foobar")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -146,7 +146,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
 // using with Windows Script Host
 // var fso = WScript.CreateObject("Scripting.FileSystemObject");
 // var files = fso.GetFolder("C:\\").Files;
-// Enumerable.From(files).Select("$.Name").ForEach("WScript.Echo($)");</pre></code> 
+// Enumerable.From(files).Select("$.Name").ForEach("WScript.Echo($)");</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -160,7 +160,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T element
             </td> 
             <td> 
-                <pre><code>Enumerable.Return("foobar")</pre></code> 
+                <pre><code>Enumerable.Return("foobar")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -175,7 +175,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
             </td> 
             <td> 
                 <pre><code>Enumerable.Matches("xbcyBCzbc", /(.)bc/i)
-.Select("'index='+$.index+' all='+$[0]+' capture='+$[1]")</pre></code> 
+.Select("'index='+$.index+' all='+$[0]+' capture='+$[1]")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -184,7 +184,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
             </td> 
             <td> 
                 <pre><code>Enumerable.Matches("xbcyBCzbc", "(.)bc")
-.Select("'index='+$.index+' all='+$[0]+' capture='+$[1]")</pre></code> 
+.Select("'index='+$.index+' all='+$[0]+' capture='+$[1]")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -193,7 +193,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
             </td> 
             <td> 
                 <pre><code>Enumerable.Matches("xbcyBCzbc", "(.)bc", "i")
-.Select("'index='+$.index+' all='+$[0]+' capture='+$[1]")</pre></code> 
+.Select("'index='+$.index+' all='+$[0]+' capture='+$[1]")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -207,7 +207,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start, int count
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(10,5)</pre></code> 
+                <pre><code>Enumerable.Range(10,5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -215,7 +215,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start, int count, int step
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(10,5,3)</pre></code> 
+                <pre><code>Enumerable.Range(10,5,3)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -229,7 +229,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start, int count
             </td> 
             <td> 
-                <pre><code>Enumerable.RangeDown(10,5)</pre></code> 
+                <pre><code>Enumerable.RangeDown(10,5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -237,7 +237,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start, int count, int step
             </td> 
             <td> 
-                <pre><code>Enumerable.RangeDown(10,5,3)</pre></code> 
+                <pre><code>Enumerable.RangeDown(10,5,3)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -251,8 +251,8 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start, int to
             </td> 
             <td> 
-                <pre><code>Enumerable.RangeTo(10,18)</pre></code> 
-                <pre><code>Enumerable.RangeTo(3,-5)</pre></code> 
+                <pre><code>Enumerable.RangeTo(10,18)</code></pre>
+                <pre><code>Enumerable.RangeTo(3,-5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -260,8 +260,8 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start, int to, int step
             </td> 
             <td> 
-                <pre><code>Enumerable.RangeTo(1,9,3)</pre></code> 
-                <pre><code>Enumerable.RangeTo(1,-9,3)</pre></code> 
+                <pre><code>Enumerable.RangeTo(1,9,3)</code></pre>
+                <pre><code>Enumerable.RangeTo(1,-9,3)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -275,7 +275,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T obj
             </td> 
             <td> 
-                <pre><code>Enumerable.Repeat(3).Take(5)</pre></code> 
+                <pre><code>Enumerable.Repeat(3).Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -283,7 +283,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T obj, int count
             </td> 
             <td> 
-                <pre><code>Enumerable.Repeat("foo",10)</pre></code> 
+                <pre><code>Enumerable.Repeat("foo",10)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -304,7 +304,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
 //         function (ts) { ts.Close() })
 //     .TakeWhile(function (ts) { return !ts.AtEndOfStream })
 //     .Select(function (ts) { return ts.ReadLine() });
-</pre></code> 
+</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -318,7 +318,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T func()
             </td> 
             <td> 
-                <pre><code>Enumerable.Generate("Math.random()").Take(5)</pre></code> 
+                <pre><code>Enumerable.Generate("Math.random()").Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -326,7 +326,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T func(), int count
             </td> 
             <td> 
-                <pre><code>Enumerable.Generate("Math.random()", 5)</pre></code> 
+                <pre><code>Enumerable.Generate("Math.random()", 5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -340,7 +340,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.ToInfinity().Take(5)</pre></code> 
+                <pre><code>Enumerable.ToInfinity().Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -348,7 +348,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start
             </td> 
             <td> 
-                <pre><code>Enumerable.ToInfinity(1000).Take(5)</pre></code> 
+                <pre><code>Enumerable.ToInfinity(1000).Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -356,7 +356,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start, int step
             </td> 
             <td> 
-                <pre><code>Enumerable.ToInfinity(1000,5).Take(5)</pre></code> 
+                <pre><code>Enumerable.ToInfinity(1000,5).Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -370,7 +370,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.ToNegativeInfinity().Take(5)</pre></code> 
+                <pre><code>Enumerable.ToNegativeInfinity().Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -378,7 +378,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start
             </td> 
             <td> 
-                <pre><code>Enumerable.ToNegativeInfinity(1000).Take(5)</pre></code> 
+                <pre><code>Enumerable.ToNegativeInfinity(1000).Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -386,7 +386,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 int start, int step
             </td> 
             <td> 
-                <pre><code>Enumerable.ToNegativeInfinity(1000,5).Take(5)</pre></code> 
+                <pre><code>Enumerable.ToNegativeInfinity(1000,5).Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -400,7 +400,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T seed, T func(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Unfold(5, "$+3").Take(10)</pre></code> 
+                <pre><code>Enumerable.Unfold(5, "$+3").Take(10)</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -436,7 +436,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T[] func(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Return(1).CascadeBreadthFirst("$+$").Take(5)</pre></code> 
+                <pre><code>Enumerable.Return(1).CascadeBreadthFirst("$+$").Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -444,7 +444,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T[] func(T), T resultSelector(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Return(1).CascadeBreadthFirst("$+$","$*$").Take(5)</pre></code> 
+                <pre><code>Enumerable.Return(1).CascadeBreadthFirst("$+$","$*$").Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -455,7 +455,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 <pre><code>Enumerable.Return(document.body)
 .CascadeBreadthFirst("$.childNodes", "v,n=>{value:v,nestLevel:n}")
 .Where("$.nestLevel<3 && $.value.nodeType == 1")
-.Select("$.nestLevel + ':' + $.value.tagName")</pre></code> 
+.Select("$.nestLevel + ':' + $.value.tagName")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -469,7 +469,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T[] func(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Return(1).CascadeDepthFirst("$+$").Take(5)</pre></code> 
+                <pre><code>Enumerable.Return(1).CascadeDepthFirst("$+$").Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -477,7 +477,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 T[] func(T), T resultSelector(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Return(1).CascadeDepthFirst("$+$","$*$").Take(5)</pre></code> 
+                <pre><code>Enumerable.Return(1).CascadeDepthFirst("$+$","$*$").Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -488,7 +488,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
                 <pre><code>Enumerable.Return(document.body)
 .CascadeDepthFirst("$.childNodes", "v,n=>{value:v,nestLevel:n}")
 .Where("$.nestLevel<3 && $.value.nodeType == 1")
-.Select("$.nestLevel + ':' + $.value.tagName")</pre></code> 
+.Select("$.nestLevel + ':' + $.value.tagName")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -503,7 +503,7 @@ Enumerable.From(node).Select("$.innerHTML")</pre></code>
             </td> 
             <td> 
                 <pre><code>var array = [1,[234,2,[62,3]],[234,5],3];
-Enumerable.From(array).Flatten()</pre></code> 
+Enumerable.From(array).Flatten()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -518,7 +518,7 @@ Enumerable.From(array).Flatten()</pre></code>
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(1,10)
-.Pairwise("prev,next=>prev + ':' + next")</pre></code> 
+.Pairwise("prev,next=>prev + ':' + next")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -532,7 +532,7 @@ Enumerable.From(array).Flatten()</pre></code>
                 T func(T, T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Scan("a,b=>a+b")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Scan("a,b=>a+b")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -540,7 +540,7 @@ Enumerable.From(array).Flatten()</pre></code>
                 T seed, T func(T, T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Scan(100,"a,b=>a+b")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Scan(100,"a,b=>a+b")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -548,7 +548,7 @@ Enumerable.From(array).Flatten()</pre></code>
                 T seed, T func(T, T), T resultSelector(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Scan(100,"a,b=>a+b","$*10")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Scan(100,"a,b=>a+b","$*10")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -562,7 +562,7 @@ Enumerable.From(array).Flatten()</pre></code>
                 T selector(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Select("$*10")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Select("$*10")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -570,7 +570,7 @@ Enumerable.From(array).Flatten()</pre></code>
                 T selector(T, int)
             </td> 
             <td> 
-                <pre><code>Enumerable.RangeDown(10,10).Select("value,index=>index + ':' + value")</pre></code> 
+                <pre><code>Enumerable.RangeDown(10,10).Select("value,index=>index + ':' + value")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -584,7 +584,7 @@ Enumerable.From(array).Flatten()</pre></code>
                 T[] collectionSelector(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,3).SelectMany("Enumerable.Repeat($,3)")</pre></code> 
+                <pre><code>Enumerable.Range(1,3).SelectMany("Enumerable.Repeat($,3)")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -593,7 +593,7 @@ Enumerable.From(array).Flatten()</pre></code>
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(5,5)
-.SelectMany("value,index=>Enumerable.Repeat('str'+value,index+1)")</pre></code> 
+.SelectMany("value,index=>Enumerable.Repeat('str'+value,index+1)")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -602,7 +602,7 @@ Enumerable.From(array).Flatten()</pre></code>
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(1,3)
-.SelectMany("Enumerable.Repeat($,3)","first,middle=>first + ':' + middle*10")</pre></code> 
+.SelectMany("Enumerable.Repeat($,3)","first,middle=>first + ':' + middle*10")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -611,7 +611,7 @@ Enumerable.From(array).Flatten()</pre></code>
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(5,5)
-.SelectMany("v,i=>Enumerable.Repeat('str'+v,i+1)","f,m=>f + ':' + m")</pre></code> 
+.SelectMany("v,i=>Enumerable.Repeat('str'+v,i+1)","f,m=>f + ':' + m")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -625,7 +625,7 @@ Enumerable.From(array).Flatten()</pre></code>
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Where("$%2==0")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Where("$%2==0")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -633,7 +633,7 @@ Enumerable.From(array).Flatten()</pre></code>
                 bool predicate(T, int)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Where("value,index=>value*index>10")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Where("value,index=>value*index>10")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -647,11 +647,11 @@ Enumerable.From(array).Flatten()</pre></code>
                 Class type
             </td> 
             <td> 
-                <pre><code>Enumerable.From([1,"a",2,"b","c",3]).OfType(Number)</pre></code> 
-                <pre><code>Enumerable.From([1,"a",2,"b","c",3]).OfType(String)</pre></code> 
+                <pre><code>Enumerable.From([1,"a",2,"b","c",3]).OfType(Number)</code></pre>
+                <pre><code>Enumerable.From([1,"a",2,"b","c",3]).OfType(String)</code></pre>
                 <pre><code>function ClassA(v){this.v = v}
 Enumerable.From([new ClassA("a"),1,2,new ClassA("b")])
-.OfType(ClassA).Select("$.v")</pre></code> 
+.OfType(ClassA).Select("$.v")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -666,7 +666,7 @@ Enumerable.From([new ClassA("a"),1,2,new ClassA("b")])
             </td> 
             <td> 
                 <pre><code>Enumerable.RangeDown(10,10)
-.Zip(Enumerable.Range(1,10),"outer,inner=>outer + ':' + inner")</pre></code> 
+.Zip(Enumerable.Range(1,10),"outer,inner=>outer + ':' + inner")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -675,7 +675,7 @@ Enumerable.From([new ClassA("a"),1,2,new ClassA("b")])
             </td> 
             <td> 
                 <pre><code>Enumerable.RangeDown(10,10)
-.Zip(Enumerable.Range(1,10),"outer,inner,index=>index + ':' + outer*inner")</pre></code> 
+.Zip(Enumerable.Range(1,10),"outer,inner,index=>index + ':' + outer*inner")</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -714,7 +714,7 @@ Enumerable.From([new ClassA("a"),1,2,new ClassA("b")])
                 <pre><code>var array1 = [13,413,5,135,61,631,13,61,3];
 var array2 = [13,134,53,6,3,7,13,7,7,135,61,3,13];
 Enumerable.From(array1)
-.Join(Enumerable.From(array2),"","","outer,inner=>outer + ':' + inner")</pre></code> 
+.Join(Enumerable.From(array2),"","","outer,inner=>outer + ':' + inner")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -731,7 +731,7 @@ Enumerable.From(array1)
                 <pre><code>var array1 = [13,413,5,135,61,631,13,61,3];
 var array2 = [13,134,53,6,3,7,13,7,7,135,61,3,13];
 Enumerable.From(array1)
-.GroupJoin(array2,"","","outer,lookup=>outer + ':' + lookup.ToString('-')")</pre></code> 
+.GroupJoin(array2,"","","outer,lookup=>outer + ':' + lookup.ToString('-')")</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -767,8 +767,8 @@ Enumerable.From(array1)
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).All("$<5")</pre></code> 
-                <pre><code>Enumerable.Range(1,10).All("$<15")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).All("$<5")</code></pre>
+                <pre><code>Enumerable.Range(1,10).All("$<15")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -782,8 +782,8 @@ Enumerable.From(array1)
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,0).Any()</pre></code> 
-                <pre><code>Enumerable.Range(1,10).Any()</pre></code> 
+                <pre><code>Enumerable.Range(1,0).Any()</code></pre>
+                <pre><code>Enumerable.Range(1,10).Any()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -791,8 +791,8 @@ Enumerable.From(array1)
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Any("$==5")</pre></code> 
-                <pre><code>Enumerable.Range(1,10).Any("$==15")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Any("$==5")</code></pre>
+                <pre><code>Enumerable.Range(1,10).Any("$==15")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -806,7 +806,7 @@ Enumerable.From(array1)
                 T[] second
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,5).Concat(Enumerable.Repeat("foo",5))</pre></code> 
+                <pre><code>Enumerable.Range(1,5).Concat(Enumerable.Repeat("foo",5))</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -820,7 +820,7 @@ Enumerable.From(array1)
                 int index, T[] second
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,5).Insert(3,Enumerable.Repeat("foo",5))</pre></code> 
+                <pre><code>Enumerable.Range(1,5).Insert(3,Enumerable.Repeat("foo",5))</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -834,7 +834,7 @@ Enumerable.From(array1)
                 T value
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,5).Alternate(-1)</pre></code> 
+                <pre><code>Enumerable.Range(1,5).Alternate(-1)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -848,8 +848,8 @@ Enumerable.From(array1)
                 T value
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,5).Contains(3)</pre></code> 
-                <pre><code>Enumerable.Range(1,5).Contains(10)</pre></code> 
+                <pre><code>Enumerable.Range(1,5).Contains(3)</code></pre>
+                <pre><code>Enumerable.Range(1,5).Contains(10)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -857,8 +857,8 @@ Enumerable.From(array1)
                 T value, T compareSelector(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,5).Select("{test:$}").Contains(3)</pre></code> 
-                <pre><code>Enumerable.Range(1,5).Select("{test:$}").Contains(3,"$.test")</pre></code> 
+                <pre><code>Enumerable.Range(1,5).Select("{test:$}").Contains(3)</code></pre>
+                <pre><code>Enumerable.Range(1,5).Select("{test:$}").Contains(3,"$.test")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -872,8 +872,8 @@ Enumerable.From(array1)
                 T defaultValue
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,5).DefaultIfEmpty("default")</pre></code> 
-                <pre><code>Enumerable.Range(1,0).DefaultIfEmpty("default")</pre></code> 
+                <pre><code>Enumerable.Range(1,5).DefaultIfEmpty("default")</code></pre>
+                <pre><code>Enumerable.Range(1,0).DefaultIfEmpty("default")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -888,7 +888,7 @@ Enumerable.From(array1)
             </td> 
             <td> 
                 <pre><code>var array = [1,412,5,3,5,412,7];
-Enumerable.From(array).Distinct()</pre></code> 
+Enumerable.From(array).Distinct()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -897,7 +897,7 @@ Enumerable.From(array).Distinct()</pre></code>
             </td> 
             <td> 
                 <pre><code>var seq = Enumerable.Range(1,10).Select("{test:$%3}");
-seq.Distinct("$.test").Select("$.test")</pre></code> 
+seq.Distinct("$.test").Select("$.test")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -913,7 +913,7 @@ seq.Distinct("$.test").Select("$.test")</pre></code>
             <td> 
                 <pre><code>var array1 = [1,412,5,3,5,412,7];
 var array2 = [20,12,5,5,7,310];
-Enumerable.From(array1).Except(array2)</pre></code> 
+Enumerable.From(array1).Except(array2)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -923,7 +923,7 @@ Enumerable.From(array1).Except(array2)</pre></code>
             <td> 
                 <pre><code>var seq1 = Enumerable.Range(1,10).Select("{test:$%5}");
 var seq2 = Enumerable.Range(1,10).Select("{test:$%2}");
-seq1.Except(seq2,"$.test").Select("$.test")</pre></code> 
+seq1.Except(seq2,"$.test").Select("$.test")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -939,7 +939,7 @@ seq1.Except(seq2,"$.test").Select("$.test")</pre></code>
             <td> 
                 <pre><code>var array1 = [1,412,5,3,5,412,7];
 var array2 = [20,12,5,5,7,310];
-Enumerable.From(array1).Intersect(array2)</pre></code> 
+Enumerable.From(array1).Intersect(array2)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -949,7 +949,7 @@ Enumerable.From(array1).Intersect(array2)</pre></code>
             <td> 
                 <pre><code>var seq1 = Enumerable.Range(1,10).Select("{test:$%5}");
 var seq2 = Enumerable.Range(1,10).Select("{test:$%2}");
-seq1.Intersect(seq2,"$.test").Select("$.test")</pre></code> 
+seq1.Intersect(seq2,"$.test").Select("$.test")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -963,8 +963,8 @@ seq1.Intersect(seq2,"$.test").Select("$.test")</pre></code>
                 T[] second
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,5).SequenceEqual(Enumerable.Range(1,5))</pre></code> 
-                <pre><code>Enumerable.Range(1,5).SequenceEqual(Enumerable.Range(1,6))</pre></code> 
+                <pre><code>Enumerable.Range(1,5).SequenceEqual(Enumerable.Range(1,5))</code></pre>
+                <pre><code>Enumerable.Range(1,5).SequenceEqual(Enumerable.Range(1,6))</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -973,7 +973,7 @@ seq1.Intersect(seq2,"$.test").Select("$.test")</pre></code>
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(1,10).Select("{test:$%5}")
-.SequenceEqual(Enumerable.Range(1,10).Select("{test:$%5}"),"$.test")</pre></code> 
+.SequenceEqual(Enumerable.Range(1,10).Select("{test:$%5}"),"$.test")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -989,7 +989,7 @@ seq1.Intersect(seq2,"$.test").Select("$.test")</pre></code>
             <td> 
                 <pre><code>var array1 = [1,412,5,3,5,412,7];
 var array2 = [20,12,5,5,7,310];
-Enumerable.From(array1).Union(array2)</pre></code> 
+Enumerable.From(array1).Union(array2)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -999,7 +999,7 @@ Enumerable.From(array1).Union(array2)</pre></code>
             <td> 
                 <pre><code>var seq1 = Enumerable.Range(1,5).Select("{test:$}");
 var seq2 = Enumerable.Range(3,7).Select("{test:$}");
-seq1.Union(seq2,"$.test").Select("$.test")</pre></code> 
+seq1.Union(seq2,"$.test").Select("$.test")</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -1037,7 +1037,7 @@ seq1.Union(seq2,"$.test").Select("$.test")</pre></code>
             <td> 
                 <pre><code> 
 var array = [1,51,61,75,8,35,43];
-Enumerable.From(array).OrderBy()</pre></code> 
+Enumerable.From(array).OrderBy()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1047,7 +1047,7 @@ Enumerable.From(array).OrderBy()</pre></code>
             <td> 
                 <pre><code> 
 var array = [{a:"a"},{a:"z"},{a:"k"},{a:"l"},{a:"m"},{a:"c"}];
-Enumerable.From(array).OrderBy("$.a").Select("$.a")</pre></code> 
+Enumerable.From(array).OrderBy("$.a").Select("$.a")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1063,7 +1063,7 @@ Enumerable.From(array).OrderBy("$.a").Select("$.a")</pre></code>
             <td> 
                 <pre><code> 
 var array = [1,51,61,75,8,35,43];
-Enumerable.From(array).OrderByDescending()</pre></code> 
+Enumerable.From(array).OrderByDescending()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1073,7 +1073,7 @@ Enumerable.From(array).OrderByDescending()</pre></code>
             <td> 
                 <pre><code> 
 var array = [{a:"a"},{a:"z"},{a:"k"},{a:"l"},{a:"m"},{a:"c"}];
-Enumerable.From(array).OrderByDescending("$.a").Select("$.a")</pre></code> 
+Enumerable.From(array).OrderByDescending("$.a").Select("$.a")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1096,7 +1096,7 @@ var list = [
        { a: 7, b: 3, c: 2 },
        { a: 4, b: 1, c: 5 }];
 Enumerable.From(list).OrderBy("$.a").ThenBy("$.c").ThenBy("$.b")
-.Select("$.a + ':' + $.b + ':' + $.c")</pre></code> 
+.Select("$.a + ':' + $.b + ':' + $.c")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1119,7 +1119,7 @@ var list = [
        { a: 7, b: 3, c: 2 },
        { a: 4, b: 1, c: 5 }];
 Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$.b")
-.Select("$.a + ':' + $.b + ':' + $.c")</pre></code> 
+.Select("$.a + ':' + $.b + ':' + $.c")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1133,7 +1133,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Reverse()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Reverse()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1147,7 +1147,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Shuffle()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Shuffle()</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -1184,7 +1184,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(1,5).GroupBy("$%2==0")
-.Select("$.Key + ':' + $.Value.ToString('-')")</pre></code> 
+.Select("$.Key + ':' + $.Value.ToString('-')")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1193,7 +1193,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(1,5).GroupBy("$%2==0","$*10")
-.Select("$.Key + ':' + $.Value.ToString('-')")</pre></code> 
+.Select("$.Key + ':' + $.Value.ToString('-')")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1202,7 +1202,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(1,5)
-.GroupBy("$%2==0","","key,value=>key+':'+value.ToString('-')")</pre></code> 
+.GroupBy("$%2==0","","key,value=>key+':'+value.ToString('-')")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1217,7 +1217,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.From([1,2,2,3,3,2,1,1]).PartitionBy("i=>i")
-.Select("$.Key + ':' + $.Value.ToString('-')")</pre></code> 
+.Select("$.Key + ':' + $.Value.ToString('-')")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1226,7 +1226,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.From([1,2,2,3,3,2,1,1]).PartitionBy("i=>i","i=>i*100")
-.Select("$.Key + ':' + $.Value.ToString('-')")</pre></code> 
+.Select("$.Key + ':' + $.Value.ToString('-')")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1235,7 +1235,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.From([1,2,2,3,3,2,1,1])
-.PartitionBy("i=>i","i=>i","key,value=>key+':'+value.ToString('-')")</pre></code> 
+.PartitionBy("i=>i","i=>i","key,value=>key+':'+value.ToString('-')")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1249,7 +1249,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 int count
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).BufferWithCount(4)</pre></code> 
+                <pre><code>Enumerable.Range(1,10).BufferWithCount(4)</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -1285,7 +1285,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T func(T, T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,5).Aggregate("a,b=>a*b")</pre></code> 
+                <pre><code>Enumerable.Range(1,5).Aggregate("a,b=>a*b")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1293,7 +1293,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T seed, T func(T, T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Aggregate(100,"a,b=>a+b")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Aggregate(100,"a,b=>a+b")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1301,7 +1301,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T seed, T func(T, T), T resultSelector(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Aggregate(100,"a,b=>a+b","$*10")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Aggregate(100,"a,b=>a+b","$*10")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1315,7 +1315,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Average()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Average()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1324,7 +1324,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.From([{a:"foo",b:5},{a:"bar",b:20},{a:"foobar",b:10}])
-.Average("$.b")</pre></code> 
+.Average("$.b")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1338,7 +1338,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Count()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Count()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1346,7 +1346,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Count("$>7")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Count("$>7")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1360,7 +1360,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Max()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Max()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1369,7 +1369,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.From([{a:"foo",b:5},{a:"bar",b:20},{a:"foobar",b:10}])
-.Max("$.b")</pre></code> 
+.Max("$.b")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1383,7 +1383,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Min()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Min()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1392,7 +1392,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.From([{a:"foo",b:5},{a:"bar",b:20},{a:"foobar",b:10}])
-.Min("$.b")</pre></code> 
+.Min("$.b")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1407,7 +1407,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.From([{a:"foo",b:5},{a:"bar",b:20},{a:"foobar",b:10}])
-.MaxBy("$.b").a</pre></code> 
+.MaxBy("$.b").a</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1422,7 +1422,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.From([{a:"foo",b:5},{a:"bar",b:20},{a:"foobar",b:10}])
-.MinBy("$.b").a</pre></code> 
+.MinBy("$.b").a</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1436,7 +1436,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Sum()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Sum()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1445,7 +1445,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             </td> 
             <td> 
                 <pre><code>Enumerable.From([{a:"foo",b:5},{a:"bar",b:20},{a:"foobar",b:10}])
-.Sum("$.b")</pre></code> 
+.Sum("$.b")</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -1481,7 +1481,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 int index
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).ElementAt(3)</pre></code> 
+                <pre><code>Enumerable.Range(1,10).ElementAt(3)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1495,7 +1495,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 int index, T defaultValue
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).ElementAtOrDefault(15,-1)</pre></code> 
+                <pre><code>Enumerable.Range(1,10).ElementAtOrDefault(15,-1)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1509,7 +1509,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).First()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).First()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1517,7 +1517,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).First("$>4")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).First("$>4")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1531,7 +1531,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T defaultValue
             </td> 
             <td> 
-                <pre><code>Enumerable.Empty().FirstOrDefault(-1)</pre></code> 
+                <pre><code>Enumerable.Empty().FirstOrDefault(-1)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1539,7 +1539,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T defaultValue, bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).FirstOrDefault(-1,"$>15")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).FirstOrDefault(-1,"$>15")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1553,7 +1553,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Last()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Last()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1561,7 +1561,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Last("$<4")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Last("$<4")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1575,7 +1575,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T defaultValue
             </td> 
             <td> 
-                <pre><code>Enumerable.Empty().LastOrDefault(-1)</pre></code> 
+                <pre><code>Enumerable.Empty().LastOrDefault(-1)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1583,7 +1583,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T defaultValue, bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).LastOrDefault(-1,"$>15")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).LastOrDefault(-1,"$>15")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1597,7 +1597,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.From("a").Single()</pre></code> 
+                <pre><code>Enumerable.From("a").Single()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1605,7 +1605,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Single("$==4")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Single("$==4")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1619,7 +1619,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T defaultValue
             </td> 
             <td> 
-                <pre><code>Enumerable.Empty().SingleOrDefault(-1)</pre></code> 
+                <pre><code>Enumerable.Empty().SingleOrDefault(-1)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1627,7 +1627,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T defaultValue, bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).SingleOrDefault(-1,"$==15")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).SingleOrDefault(-1,"$==15")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1641,7 +1641,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 int count
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Skip(5)</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Skip(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1655,7 +1655,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code><code>Enumerable.Range(1,10).SkipWhile("$<=5")</code></pre></code>
+                <pre><code>Enumerable.Range(1,10).SkipWhile("$<=5")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1663,7 +1663,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 bool predicate(T, int index)
             </td> 
             <td> 
-                <pre><code><code>Enumerable.Range(1,10).SkipWhile("value,index=>value+index<=5")</code></pre></code> 
+                <pre><code>Enumerable.Range(1,10).SkipWhile("value,index=>value+index<=5")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1677,7 +1677,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 int count
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Take(5)</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Take(5)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1691,7 +1691,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 bool predicate(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).TakeWhile("$<=5")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).TakeWhile("$<=5")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1699,7 +1699,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 bool predicate(T, int index)
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).TakeWhile("value,index=>value+index<=5")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).TakeWhile("value,index=>value+index<=5")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1713,7 +1713,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).TakeExceptLast()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).TakeExceptLast()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1721,7 +1721,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 Number count
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).TakeExceptLast(3)</pre></code> 
+                <pre><code>Enumerable.Range(1,10).TakeExceptLast(3)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1735,8 +1735,8 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T item
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).IndexOf(3)</pre></code> 
-                <pre><code>Enumerable.Range(1,10).IndexOf(15)</pre></code> 
+                <pre><code>Enumerable.Range(1,10).IndexOf(3)</code></pre>
+                <pre><code>Enumerable.Range(1,10).IndexOf(15)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1750,8 +1750,8 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 T item
             </td> 
             <td> 
-                <pre><code>Enumerable.From([1,2,3,2,5]).LastIndexOf(2)</pre></code> 
-                <pre><code>Enumerable.From([1,2,3,2,5]).LastIndexOf(20)</pre></code> 
+                <pre><code>Enumerable.From([1,2,3,2,5]).LastIndexOf(2)</code></pre>
+                <pre><code>Enumerable.From([1,2,3,2,5]).LastIndexOf(20)</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -1787,7 +1787,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).ToArray()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).ToArray()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1803,7 +1803,7 @@ Enumerable.From(list).OrderBy("$.a").ThenByDescending("$.c").ThenByDescending("$
             <td> 
                 <pre><code>var result = Enumerable.From(["temp.xls", "temp.pdf", "temp.jpg", "temp2.pdf"])
 .ToLookup("$.match(/\\.(.+$)/)[1]");
-Enumerable.From(result).Select("$.Key + ' : ' + $.Value")</pre></code> 
+Enumerable.From(result).Select("$.Key + ' : ' + $.Value")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1813,7 +1813,7 @@ Enumerable.From(result).Select("$.Key + ' : ' + $.Value")</pre></code>
             <td> 
                 <pre><code>var result = Enumerable.From(["temp.xls", "temp.pdf", "temp.jpg", "temp2.pdf"])
 .ToLookup("$.match(/\\.(.+$)/)[1]","$.match(/(.+)\\.[^.]+$/)[1]");
-Enumerable.From(result).Select("$.Key + ' : ' + $.Value")</pre></code> 
+Enumerable.From(result).Select("$.Key + ' : ' + $.Value")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1829,7 +1829,7 @@ Enumerable.From(result).Select("$.Key + ' : ' + $.Value")</pre></code>
             <td> 
                 <pre><code>var obj = Enumerable.Range(1,10).Select("value,index=>{id:'id_' + index,value:value}")
 .ToObject("$.id","$.value");
-Enumerable.From(obj).Select("$.Key + ':' + $.Value")</pre></code> 
+Enumerable.From(obj).Select("$.Key + ':' + $.Value")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1843,7 +1843,7 @@ Enumerable.From(obj).Select("$.Key + ':' + $.Value")</pre></code>
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(0,10).ToString()</pre></code> 
+                <pre><code>Enumerable.Range(0,10).ToString()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1851,7 +1851,7 @@ Enumerable.From(obj).Select("$.Key + ':' + $.Value")</pre></code>
                 String separator
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(0,10).ToString("-")</pre></code> 
+                <pre><code>Enumerable.Range(0,10).ToString("-")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1859,7 +1859,7 @@ Enumerable.From(obj).Select("$.Key + ':' + $.Value")</pre></code>
                 String separator, T selector(T)
             </td> 
             <td> 
-                <pre><code>Enumerable.From([{k:"foo"},{k:"bar"}]).ToString("-","$.k")</pre></code> 
+                <pre><code>Enumerable.From([{k:"foo"},{k:"bar"}]).ToString("-","$.k")</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -1897,7 +1897,7 @@ Enumerable.From(obj).Select("$.Key + ':' + $.Value")</pre></code>
             <td> 
                 <pre><code>Enumerable.Range(1,10).Do(function(i){
 document.write('do:'+ i +'|');})
-.Where("$%2==0")</pre></code> 
+.Where("$%2==0")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1907,7 +1907,7 @@ document.write('do:'+ i +'|');})
             <td> 
                 <pre><code>Enumerable.Range(1,10).Do(function(value,index){
 document.write("do:" + index + '-' + value + "&lt;br/>");})
-.OrderBy("").Take(2)</pre></code> 
+.OrderBy("").Take(2)</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1922,7 +1922,7 @@ document.write("do:" + index + '-' + value + "&lt;br/>");})
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(1,10).ForEach(function(i){
-document.write(i);})</pre></code> 
+document.write(i);})</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1931,7 +1931,7 @@ document.write(i);})</pre></code>
             </td> 
             <td> 
                 <pre><code>Enumerable.Range(1,10).ForEach(function(value,index){
-document.write(index + ':' + value + "&lt;br/>");})</pre></code> 
+document.write(index + ':' + value + "&lt;br/>");})</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1944,7 +1944,7 @@ document.write(index + ':' + value + "&lt;br/>");})</pre></code>
 if (i % 2 == 0) return; // continue
 if (i > 6) return false; // break
 document.write(i + "&lt;br/>");
-})</pre></code> 
+})</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1957,7 +1957,7 @@ document.write(i + "&lt;br/>");
 if (index % 2 == 0) return; // continue
 if (index > 6) return false; // break
 document.write(index + s + "&lt;br/>");
-})</pre></code> 
+})</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1971,7 +1971,7 @@ document.write(index + s + "&lt;br/>");
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Write()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Write()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1979,7 +1979,7 @@ document.write(index + s + "&lt;br/>");
                 String separator
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Write("-")</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Write("-")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -1988,7 +1988,7 @@ document.write(index + s + "&lt;br/>");
             </td> 
             <td> 
                 <pre><code>Enumerable.From([{a:"foo",b:1},{a:"bar",b:3}])
-.Write("-","$.a + ':' + $.b")</pre></code> 
+.Write("-","$.a + ':' + $.b")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2002,7 +2002,7 @@ document.write(index + s + "&lt;br/>");
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).WriteLine()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).WriteLine()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2011,7 +2011,7 @@ document.write(index + s + "&lt;br/>");
             </td> 
             <td> 
                 <pre><code>Enumerable.From([{a:"foo",b:1},{a:"bar",b:3}])
-.WriteLine("$.a + ':' + $.b")</pre></code> 
+.WriteLine("$.a + ':' + $.b")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2025,7 +2025,7 @@ document.write(index + s + "&lt;br/>");
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Trace().Force()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Trace().Force()</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -2063,7 +2063,7 @@ document.write(index + s + "&lt;br/>");
             <td> 
                 <pre><code>Enumerable.Range(1,10).Select(function(i){
 if(i == 5) throw new Error("enumerable_error"); else return i;})
-.Catch("document.write($.message)")</pre></code> 
+.Catch("document.write($.message)")</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2077,7 +2077,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
                 void finallyAction()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,5).Finally(function(){document.write("finally")})</pre></code> 
+                <pre><code>Enumerable.Range(1,5).Finally(function(){document.write("finally")})</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -2113,7 +2113,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Trace().Force()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Trace().Force()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2121,7 +2121,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
                 String message
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).Trace("Gen").Where("$%3==0").Trace("Filtered").Force()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).Trace("Gen").Where("$%3==0").Trace("Filtered").Force()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2130,7 +2130,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
             </td> 
             <td> 
                 <pre><code>Enumerable.From([{a:"foo",b:1},{a:"bar",b:3}])
-.Trace("Gen","$.a").Force()</pre></code> 
+.Trace("Gen","$.a").Force()</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -2166,7 +2166,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).GetEnumerator()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).GetEnumerator()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2180,7 +2180,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).GetEnumerator().MoveNext()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).GetEnumerator().MoveNext()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2194,7 +2194,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).GetEnumerator().Current()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).GetEnumerator().Current()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2208,7 +2208,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
                 ()
             </td> 
             <td> 
-                <pre><code>Enumerable.Range(1,10).GetEnumerator().Dispose()</pre></code> 
+                <pre><code>Enumerable.Range(1,10).GetEnumerator().Dispose()</code></pre>
             </td> 
         </tr> 
     </tbody> 
@@ -2244,7 +2244,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
                 ()
             </td> 
             <td> 
-                <pre><code>// Enumerable.Repeat("foo",10).TojQuery()</pre></code> 
+                <pre><code>// Enumerable.Repeat("foo",10).TojQuery()</code></pre>
             </td> 
         </tr> 
         <tr> 
@@ -2258,7 +2258,7 @@ if(i == 5) throw new Error("enumerable_error"); else return i;})
                 ()
             </td> 
             <td> 
-                <pre><code>// $("div").toEnumerable()</pre></code> 
+                <pre><code>// $("div").toEnumerable()</code></pre>
             </td> 
         </tr> 
     </tbody> 
