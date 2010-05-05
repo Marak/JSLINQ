@@ -1,6 +1,6 @@
 // this be the demo script for using JSLINQ in node.js
 
-var JSLINQ = require('./JSLINQ'),
+var JSLINQ = require('./lib/JSLINQ'),
     sys = require('sys');
     
     var sampleData = 
