@@ -7,8 +7,7 @@
 
 assume the following JSON data:
 
-    var sampleData = {
-    [
+    var sampleData = [
         {
             "ID": 1,
             "FirstName": "Chris",
@@ -109,7 +108,7 @@ assume the following JSON data:
                 2003
             ]
         }
-    ]};
+    ];
 
 now that we have some JSON data to work with, we can perform LINQ statements on it.
 
