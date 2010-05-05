@@ -129,7 +129,12 @@ now that we have some JSON data to work with, we can perform LINQ statements on 
      output: {"items":["Bernard","Chris","Chris","Dirk","John","Josh","Kate","Kate","Katie","Steve"]}
 
 ###simple Where 
-					var sample = JSLINQ(sampleData).Where(function (item) {return item.FirstName == "Chris";});
-					output: [{"ID":1,"FirstName":"Chris","LastName":"Pearson","BookIDs":[1001,1002,1003]},{"ID":8,"FirstName":"Chris","LastName":"Stevenson","BookIDs":[4001,4002,4003]}]
+	var sample = JSLINQ(sampleData).Where(function (item) {return item.FirstName == "Chris";});
 
-###For the Full API spec see the online demo @ [http://maraksquires.com/JSLINQ/](http://maraksquires.com/JSLINQ/)
+	output: [
+             {"ID":1,"FirstName":"Chris","LastName":"Pearson","BookIDs":[1001,1002,1003]},
+             {"ID":8,"FirstName":"Chris","LastName":"Stevenson","BookIDs":[4001,4002,4003]}
+            ]
+
+###For the Full JSLINQ Demo and API implementation goto @ [http://maraksquires.com/JSLINQ/](http://maraksquires.com/JSLINQ/)
+###original project home : [codeplex sucks](http://jslinq.codeplex.com/)
