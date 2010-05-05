@@ -4,11 +4,23 @@
 // This project is licensed under the Microsoft Reciprocal License (Ms-RL)
 // This license can be found here: http://jslinq.codeplex.com/license
 //-----------------------------------------------------------------------
-
 // Modfications by Marak Squires (C) 2010, MIT
 
+// little hack for making window turn into exports for node.js, thanks isaacs
+var isBrowser = function () { return this.window === this };
+
+if(!isBrowser()){
+  window = exports;
+  // namespace for CommonJS export of top level JSLINQ method
+  var namespace = "Exec";
+}
+else{
+  //sigh polute the global namespace
+  var namespace = "JSLINQ";
+}
+
 (function() {
-    JSLINQ = window.JSLINQ = function(dataItems) {
+    JSLINQ = window[namespace] = function(dataItems) {
         return new JSLINQ.fn.init(dataItems);
     };
     JSLINQ.fn = JSLINQ.prototype = {
