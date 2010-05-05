@@ -1,14 +1,13 @@
-A pure JS implementation of Microsoft's Language Integrated Query library
-http://en.wikipedia.org/wiki/Language_Integrated_Query
-(note: just because microsoft is evil, doesn't mean that this one little JS library doesn't kick ass)
+#JSLINQ - Perform LINQ against JSON
+##A pure JS implementation of Microsoft's [Language Integrated Query](http://en.wikipedia.org/wiki/Language_Integrated_Query) library
+### works in the browser or in node.js (CommonJS)
+<em>(note: just because microsoft is evil, doesn't mean that this one little JS library doesn't kick ass)</em>
 
-#Perform SQL against JSON
-## works in the browser or in node.js (CommonJS)
-
-###basic examples
+##basic examples
 
 assume the following JSON data:
 
+    var sampleData = {
     [
         {
             "ID": 1,
@@ -110,27 +109,27 @@ assume the following JSON data:
                 2003
             ]
         }
-    ]
+    ]};
 
+now that we have some JSON data to work with, we can perform LINQ statements on it.
 
+###simple Select
 
-###simple Select statement
-
-    var sample = JSLINQ(data).
+    var sample = JSLINQ(sampleData).
       Select(function (item) {return item.FirstName;});
 
-    output : {"items":["Chris","Kate","Josh","John","Steve","Katie","Dirk","Chris","Bernard","Kate"]}
+    output: {"items":["Chris","Kate","Josh","John","Steve","Katie","Dirk","Chris","Bernard","Kate"]}
 
-###simple Select statement with OrderBY
+###simple Select with OrderBy
 
-     var sample = JSLINQ(Samples.People).
-       OrderBy(function (item) {return item.FirstName;}).
-       Select(function (item) {return item.FirstName;});
+     var sample = JSLINQ(sampleData).
+      Select(function (item) {return item.FirstName;}).
+      OrderBy(function (item) {return item;});
 
-     output : {"items":["Bernard","Chris","Chris","Dirk","John","Josh","Kate","Kate","Katie","Steve"]}
+     output: {"items":["Bernard","Chris","Chris","Dirk","John","Josh","Kate","Kate","Katie","Steve"]}
 
-console.log(sample);
+###simple Where 
+					var sample = JSLINQ(sampleData).Where(function (item) {return item.FirstName == "Chris";});
+					output: [{"ID":1,"FirstName":"Chris","LastName":"Pearson","BookIDs":[1001,1002,1003]},{"ID":8,"FirstName":"Chris","LastName":"Stevenson","BookIDs":[4001,4002,4003]}]
 
-Select, Join, Where, GroupBy
-
-###Full API Spec: 
+###For the Full API spec see the online demo @ [http://maraksquires.com/JSLINQ/](http://maraksquires.com/JSLINQ/)
