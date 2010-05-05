@@ -137,4 +137,4 @@ now that we have some JSON data to work with, we can perform LINQ statements on 
             ]
 
 ###For the Full JSLINQ Demo and API implementation goto @ [http://maraksquires.com/JSLINQ/](http://maraksquires.com/JSLINQ/)
-###original project home : [codeplex sucks](http://jslinq.codeplex.com/)
+##Original Project Home : [Codeplex Sucks](http://jslinq.codeplex.com/)
