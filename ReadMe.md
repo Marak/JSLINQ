@@ -1,3 +1,5 @@
+# this project is mostly un-maintained. i worked on this as an experiment to learn LINQ a bit better and get to write some node code. i might pick it back up later, but there are more active / better versions if you google around a bit.
+
 #JSLINQ - Perform LINQ against JSON
 ##A pure JS implementation of Microsoft's [Language Integrated Query](http://en.wikipedia.org/wiki/Language_Integrated_Query) library
 ### works in the browser or in node.js (CommonJS)
